@@ -1,12 +1,12 @@
 <?php 
 
-/* function active($menu){
+ function active($menu){
     $ci=get_instance();
     if($ci->uri->segment(2)==$menu){
         echo "active";
     }
 }
-
+/*
 function postvalue($name,$xss=1){
     $ci=get_instance();
     return $ci->input->post($name,$xss);
@@ -26,7 +26,7 @@ function imageupload($name,$path){
     }
     return null;
 }
-
+*/
 function back(){
     return redirect($_SERVER['HTTP_REFERER']);
 }
@@ -43,7 +43,7 @@ function flashread(){
     $ci=get_instance();
     echo $ci->session->flashdata('flashmessage');
 }
-function flashhome($type,$title){
+/* function flashhome($type,$title){
     $message='<div class="alert alert-'.$type.' alert-dismissible fade show" role="alert">
             <strong>'.$title.'</strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
@@ -54,4 +54,4 @@ function flashhome($type,$title){
 function flash2read(){
     $ci=get_instance();
     echo $ci->session->flashdata('flashmessage2');
-} */
+}  */
