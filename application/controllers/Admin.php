@@ -21,7 +21,7 @@ class Admin extends CI_Controller {
 
     public function login(){
 		$username = $this->input->post('username');
-		$pass = $this->input->post('password'); 
+		$pass = md5($this->input->post('password')); 
 		
 		$exist = Yonetim::find(['username'=>$username,'password'=>$pass]);
 		if($exist){
@@ -39,5 +39,53 @@ class Admin extends CI_Controller {
 		$data['head'] = "Site Ayarları";
 		$data['config'] = Ayarlar::find(1);
 		$this->load->view('admin/panel',$data);
+	}
+    public function panelpost(){
+		$config = Ayarlar::find(1);
+
+		$data = ['name'=>postvalue('name'),
+				 'address'=>postvalue('address'),
+				 'phone'=>postvalue('phone'),
+				 'mail'=>postvalue('mail'),
+				 'facebook'=>postvalue('facebook'),
+				 'twitter'=>postvalue('twitter'),
+				 'instagram'=>postvalue('instagram'),
+				];
+/* 		if($_FILES['logo']['size']>0){
+			$data['logo']=imageupload('logo','config');
+			unlink($config->logo);
+		}
+		if($_FILES['icon']['size']>0){
+			$data['icon']=imageupload('icon','config');
+			unlink($config->icon);
+		} */
+		Ayarlar::update(1,$data);
+		flash('success','check','İşlem Başarılı');
+		back();
+	}
+
+    public function sifre(){
+		$data['head'] = "Şifre Değiştirme";
+		$this->load->view('admin/sifre',$data);
+	}
+	public function sifrepost(){
+		$pass = md5($this->input->post('oldpass'));
+		$exist = Yonetim::find(['password'=>$pass]);
+		if($exist){
+			$data = ['password'=>md5(postvalue('newpass'))];
+
+			Yonetim::update(1,$data);
+			flash('success','check','İşlem Başarılı');
+			back();
+		} else {
+			flash('danger','ban','İşlem Başarısız');
+			back();
+		}
+
+	}
+
+    public function logout(){
+		$this->session->sess_destroy();
+		redirect('admin');
 	}
 }

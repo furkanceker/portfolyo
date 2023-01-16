@@ -41,30 +41,6 @@
               <p>Ana Sayfa</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('admin/kullanici'); ?>" class="nav-link <?php active("kullanici"); ?>">
-              <i class="nav-icon fas fa-users"></i>
-              <p>Kullanıcılar</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('admin/egitmen'); ?>" class="nav-link <?php active("egitmen"); ?>">
-              <i class="nav-icon fas fa-user-tie"></i>
-              <p>Eğitmen Ekle</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('admin/kurs'); ?>" class="nav-link <?php active("kurs"); ?>">
-              <i class="nav-icon fas fa-book"></i>
-              <p>Kurslar</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="<?php echo base_url('admin/destek'); ?>" class="nav-link <?php active("destek"); ?>">
-              <i class="nav-icon fas fa-ticket-alt"></i>
-              <p>Destek</p>
-            </a>
-          </li>
           <li class="nav-item menu-open">
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-user"></i>

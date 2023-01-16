@@ -6,12 +6,12 @@
         echo "active";
     }
 }
-/*
+
 function postvalue($name,$xss=1){
     $ci=get_instance();
     return $ci->input->post($name,$xss);
 }
-
+/*
 function imageupload($name,$path){
     $ci=get_instance();
 
