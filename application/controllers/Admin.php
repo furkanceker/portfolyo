@@ -47,9 +47,10 @@ class Admin extends CI_Controller {
 				 'address'=>postvalue('address'),
 				 'phone'=>postvalue('phone'),
 				 'mail'=>postvalue('mail'),
-				 'facebook'=>postvalue('facebook'),
+				 'github'=>postvalue('github'),
 				 'twitter'=>postvalue('twitter'),
 				 'instagram'=>postvalue('instagram'),
+				 'linkedin'=>postvalue('linkedin'),
 				];
 /* 		if($_FILES['logo']['size']>0){
 			$data['logo']=imageupload('logo','config');

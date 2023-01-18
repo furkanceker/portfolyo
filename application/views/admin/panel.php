@@ -30,13 +30,17 @@
                 </div>
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-6">
-                            <label>Facebook</label>
-                            <input type="text" name="facebook" required class="form-control" value="<?= $config->facebook; ?>">
+                        <div class="col-4">
+                            <label>GitHub</label>
+                            <input type="text" name="github" required class="form-control" value="<?= $config->github; ?>">
                         </div>
-                        <div class="col-6">
+                        <div class="col-4">
                             <label>Instagram</label>
                             <input type="text" name="instagram" required class="form-control" value="<?= $config->instagram; ?>">
+                        </div>
+                        <div class="col-4">
+                            <label>LinkedIn</label>
+                            <input type="text" name="linkedin" required class="form-control" value="<?= $config->linkedin; ?>">
                         </div>
                     </div>
                 </div>
