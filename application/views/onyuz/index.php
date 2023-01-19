@@ -52,13 +52,13 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Furkan CEKER</h1>
+      <h1><?= $config->name ?></h1>
       <p>I'm <span class="typed" data-typed-items="Web Developer, Freelancer"></span></p>
       <div class="social-links">
-        <a href="https://twitter.com/heyfurken" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.instagram.com/heyfurken/" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/furkanceker/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/furkanceker" class="github"><i class="bx bxl-github"></i></a>
+        <a href="<?= $config->twitter ?>" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="<?= $config->instagram ?>" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="<?= $config->linkedin ?>" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="<?= $config->github ?>" class="github"><i class="bx bxl-github"></i></a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -71,7 +71,7 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>kısa hakkında yazısı</p>
+          <p><?= $about->info ?></p>
         </div>
 
         <div class="row">
@@ -81,28 +81,28 @@
           <div class="col-lg-12 pt-4 pt-lg-0 content">
             <h3>Freelancer &amp; Web Developer.</h3>
             <p class="fst-italic">
-              Kısa hakkında yazısı
+            <?= $about->textShort ?>
             </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>21 Apr 2003</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+90 552 331 0309</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Aydin, Turkiye</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span><?= $about->birthday ?></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><?= $about->website ?></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span><?= $about->phone ?></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span><?= $about->city ?></span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>20</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Associate Degree</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>ceker0901@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span><?= $about->age ?></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span><?= $about->degree ?></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span><?= $config->mail ?></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span><?= ($about->freelance) ? "Available" : "Unavailable" ?></span></li>
                 </ul>
               </div>
             </div>
             <p>
-              Uzun hakkında yazısı
+            <?= $about->textLong ?>
             </p>
           </div>
         </div>

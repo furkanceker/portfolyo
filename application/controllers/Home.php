@@ -6,6 +6,8 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('onyuz/index');
+		$data['config'] = Ayarlar::find(1);
+		$data['about'] = About::find(1);
+		$this->load->view('onyuz/index',$data);
 	}
 }
