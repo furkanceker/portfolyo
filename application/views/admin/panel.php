@@ -9,14 +9,6 @@
                     <input type="text" name="name" required class="form-control" value="<?= $config->name; ?>">
                 </div>
                 <div class="form-group">
-                    <label>Lokasyon</label>
-                    <input type="text" name="address" required class="form-control" value="<?= $config->address; ?>">
-                </div>
-                <div class="form-group">
-                    <label>Telefon</label>
-                    <input type="text" name="phone" required class="form-control" value="<?= $config->phone; ?>">
-                </div>
-                <div class="form-group">
                     <div class="row">
                         <div class="col-6">
                             <label>Mail</label>
@@ -48,12 +40,6 @@
                     <button class="btn btn-success btn-flat btn-block">Kaydet</button>
                 </div>
             </form>
-        </div>
-        <div class="col-6">
-            
-        </div>
-        <div class="col-3">
-            
         </div>
 </div>
 

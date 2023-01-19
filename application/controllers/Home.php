@@ -10,4 +10,14 @@ class Home extends CI_Controller {
 		$data['about'] = About::find(1);
 		$this->load->view('onyuz/index',$data);
 	}
+
+	public function contactpost(){
+		$data = ['name'=>postvalue('name'),
+			'email'=>postvalue('email'),
+			'subject'=>postvalue('subject'),
+			'message'=>postvalue('message'),
+	   	];
+		Contact::insert($data);
+		back();
+	}
 }

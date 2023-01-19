@@ -41,6 +41,18 @@
               <p>Ana Sayfa</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/about'); ?>" class="nav-link <?php active("about"); ?>">
+              <i class="nav-icon fas fa-address-card"></i>
+              <p>Hakkımda</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('admin/contact'); ?>" class="nav-link <?php active("contact"); ?>">
+              <i class="nav-icon fas fa-phone"></i>
+              <p>İletişim</p>
+            </a>
+          </li>
           <li class="nav-item menu-open">
             <a href="" class="nav-link">
               <i class="nav-icon fas fa-user"></i>

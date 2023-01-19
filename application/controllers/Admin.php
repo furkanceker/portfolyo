@@ -40,12 +40,15 @@ class Admin extends CI_Controller {
 		$data['config'] = Ayarlar::find(1);
 		$this->load->view('admin/panel',$data);
 	}
+    public function about(){
+		$data['head'] = "Hakkımda Kısmı";
+		$data['about'] = About::find(1);
+		$this->load->view('admin/about',$data);
+	}
     public function panelpost(){
 		$config = Ayarlar::find(1);
 
 		$data = ['name'=>postvalue('name'),
-				 'address'=>postvalue('address'),
-				 'phone'=>postvalue('phone'),
 				 'mail'=>postvalue('mail'),
 				 'github'=>postvalue('github'),
 				 'twitter'=>postvalue('twitter'),
@@ -64,10 +67,31 @@ class Admin extends CI_Controller {
 		flash('success','check','İşlem Başarılı');
 		back();
 	}
+    public function aboutpost(){
+		$data = ['info'=>postvalue('info'),
+				 'textShort'=>postvalue('textShort'),
+				 'textLong'=>postvalue('textLong'),
+				 'birthday'=>postvalue('birthday'),
+				 'website'=>postvalue('website'),
+				 'phone'=>postvalue('phone'),
+				 'age'=>postvalue('age'),
+				 'degree'=>postvalue('degree'),
+				 'city'=>postvalue('city'),
+				 'freelance'=>postvalue('freelance'),
+				];
+
+		About::update(1,$data);
+		flash('success','check','İşlem Başarılı');
+		back();
+	}
 
     public function sifre(){
 		$data['head'] = "Şifre Değiştirme";
 		$this->load->view('admin/sifre',$data);
+	}
+    public function contact(){
+		$data['head'] = "İletişim";
+		$this->load->view('admin/contact',$data);
 	}
 	public function sifrepost(){
 		$pass = md5($this->input->post('oldpass'));
